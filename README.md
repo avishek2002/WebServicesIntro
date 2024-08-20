@@ -1,6 +1,6 @@
 # How to guide on setting up web services
 
-## Create a maven project for the server 
+## Creating a maven project
 ### Terminal
 ```
 mvn archetype:generate -DgroupId=com.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
