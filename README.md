@@ -15,7 +15,10 @@ Replace "my-app" in DartifactId to your project name
 2. Select any archetype and version
 3. For the artifact Id, enter your project name
 4. Navigate to where you want to place your project
-5. Add the jaxws-ri dependency into the pom.xml file
+
+## Server
+1. Copy the server side code from web_service_server_code directory to <your_project_name>/src/main/java
+2. 5. Add the jaxws-ri dependency into the pom.xml file
 ```
 <dependencies>
     <dependency>
@@ -26,14 +29,11 @@ Replace "my-app" in DartifactId to your project name
     </dependency>
 </dependencies>
 ```
-
-## Start the server
-1. Run the HelloWorldPublisher.java
-2. Go to http://localhost:7779/ws/hello and download the WSDL file
-
-## Download the wsimport tool from https://repo1.maven.org/maven2/com/sun/xml/ws/jaxws-ri/4.0.0/jaxws-ri-4.0.0.zip
-## Navigate to jaxws-ri/bin, where the wsimport.sh is located
-## Run the following command for extracting seng4400 folder from the downloaded wsdl file
+3. Run the HelloWorldPublisher.java
+4. Go to http://localhost:7779/ws/hello and download the WSDL file
+5. Download the wsimport tool from https://repo1.maven.org/maven2/com/sun/xml/ws/jaxws-ri/4.0.0/jaxws-ri-4.0.0.zip
+6. Navigate to jaxws-ri/bin, where the wsimport.sh is located
+7. Run the following command for extracting seng4400 folder from the downloaded wsdl file
 ```
 ./wsimport.sh hello.wsdl -keep
 ```
@@ -42,10 +42,8 @@ alternatively, if the wsdl file has not been downloaded
 ./wsimport.sh "http://localhost:7779/ws/hello?wsdl" -keep
 ```
 
-## Copy the server side code from web_service_server_code directory to <your_project_name>/src/main/java
 
-
-## Create a new client project and add the jaxws-ri dependency
+## Client
 
 
 
