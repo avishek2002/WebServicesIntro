@@ -5,7 +5,7 @@
 ```
 mvn archetype:generate -DgroupId=com.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
 ```
-Replace "my-app" in DartifactId to your project name
+Replace "my-app" in DartifactId with your project name
 ### IntelliJ
 1. Click on "New Project" on the Project tab
 2. Enter the name and path directory where you want your project
@@ -18,7 +18,7 @@ Replace "my-app" in DartifactId to your project name
 
 ## Server
 1. Copy the server side code from web_service_server_code directory to <your_project_name>/src/main/java
-2. 5. Add the jaxws-ri dependency into the pom.xml file
+2. Add the jaxws-ri dependency into the pom.xml file
 ```
 <dependencies>
     <dependency>
@@ -37,7 +37,7 @@ Replace "my-app" in DartifactId to your project name
 ```
 ./wsimport.sh hello.wsdl -keep
 ```
-alternatively, if the wsdl file has not been downloaded
+    alternatively, if the wsdl file has not been downloaded
 ```
 ./wsimport.sh "http://localhost:7779/ws/hello?wsdl" -keep
 ```
