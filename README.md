@@ -37,10 +37,8 @@ Replace "my-app" in DartifactId with your project name
 ```
 ./wsimport.sh hello.wsdl -keep
 ```
-    alternatively, if the wsdl file has not been downloaded
-```
-./wsimport.sh "http://localhost:7779/ws/hello?wsdl" -keep
-```
+   > alternatively, if the wsdl file has not been downloaded, replace "hello.wsdl" with "http://localhost:7779/ws/hello?wsdl"
+
 
 
 ## Client
