@@ -3,8 +3,9 @@
 ## Create a maven project for the server 
 ### Terminal
 ```
-mvn archetype:generate -DgroupId=ToolsQA -DartifactId=DemoMavenProject -DarchetypeArtifactId= maven-archetype-quickstart -DinteractiveMode=false
+mvn archetype:generate -DgroupId=com.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
 ```
+Replace "my-app" in DartifactId to your project name
 ### IntelliJ
 1. Click on "New Project" on the Project tab
 2. Enter the name and path directory where you want your project
@@ -14,8 +15,7 @@ mvn archetype:generate -DgroupId=ToolsQA -DartifactId=DemoMavenProject -Darchety
 2. Select any archetype and version
 3. For the artifact Id, enter your project name
 4. Navigate to where you want to place your project
-
-## Add the jaxws-ri dependency into the pom.xml file
+5. Add the jaxws-ri dependency into the pom.xml file
 ```
 <dependencies>
     <dependency>
@@ -27,6 +27,25 @@ mvn archetype:generate -DgroupId=ToolsQA -DartifactId=DemoMavenProject -Darchety
 </dependencies>
 ```
 
-## Copy the service side code from here directory to <your_project_name>/src/main/java
+## Start the server
+1. Run the HelloWorldPublisher.java
+2. Go to http://localhost:7779/ws/hello and download the WSDL file
 
-./wsimport.sh hello.xml -keep # this is for extracting seng4400 folder from the downloaded wsdl file
+## Download the wsimport tool from https://repo1.maven.org/maven2/com/sun/xml/ws/jaxws-ri/4.0.0/jaxws-ri-4.0.0.zip
+## Navigate to jaxws-ri/bin, where the wsimport.sh is located
+## Run the following command for extracting seng4400 folder from the downloaded wsdl file
+```
+./wsimport.sh hello.wsdl -keep
+```
+alternatively, if the wsdl file has not been downloaded
+```
+./wsimport.sh "http://localhost:7779/ws/hello?wsdl" -keep
+```
+
+## Copy the server side code from web_service_server_code directory to <your_project_name>/src/main/java
+
+
+## Create a new client project and add the jaxws-ri dependency
+
+
+
