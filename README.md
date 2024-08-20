@@ -38,10 +38,19 @@ Replace "my-app" in DartifactId with your project name
 ./wsimport.sh hello.wsdl -keep
 ```
    > alternatively, if the wsdl file has not been downloaded, replace "hello.wsdl" with "http://localhost:7779/ws/hello?wsdl"
-
+8. This should create a new folder "seng4400", with stub code
 
 
 ## Client
-
-
+1. Create a new client maven project
+2. Add the jaxws-ri dependency
+2. Move the seng4400 folder into client/src/main/java
+3. Create a new class with the following in the main method
+```
+HelloWorldImplService service = new HelloWorldImplService();
+HelloWorld helloWorldObj = service.getHelloWorldImplPort();
+String result = helloWorldObj.getHelloWorld();
+System.out.println(result);
+```
+4. Run the newly created class (Note: if you get errors; try using a recent, 4.0.3, version of jaxws and/or replacing jakarta with javax in the stub code
 
