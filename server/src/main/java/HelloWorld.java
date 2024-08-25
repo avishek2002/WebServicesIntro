@@ -7,5 +7,5 @@ import javax.jws.soap.SOAPBinding.Style;
 @SOAPBinding(style = Style.RPC)  
 public interface HelloWorld{
     // added parameter here
-    @WebMethod String getHelloWorld(String name, String country, int age);
+    @WebMethod String getHelloWorld(String name, String country);
 }  

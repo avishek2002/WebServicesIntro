@@ -10,7 +10,7 @@ public class Client{
 
         // calling the getHelloWorld method from the above object and printing the result
         // this will call the function on the server and receive the message
-        String result = helloWorldObj.getHelloWorld();
+        String result = helloWorldObj.getHelloWorld("avishek", "australia");
         System.out.println(result);
     }
 }

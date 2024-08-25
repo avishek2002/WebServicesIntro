@@ -4,8 +4,8 @@ import javax.jws.WebService;
 public class HelloWorldImpl implements HelloWorld{  
     @Override
     // added parameter here
-    public String getHelloWorld(String name, String country, int age) {
+    public String getHelloWorld(String name, String country) {
         //return "Hello World";
-        return age + "Hi " + name + " from " + country + " , welcome to the Hello World program";
+        return "Hi " + name + " from " + country + " , welcome to the Hello World program";
     }  
 }  

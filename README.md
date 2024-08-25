@@ -56,4 +56,5 @@ System.out.println(result);
 
 ## Playing around
 1. On the server side, add a parameter (such as String name) to the getHelloWorld() method
-2. Re-compile and re-run the server, and execute the client; should should see that null is printed in place of your parameter (if you download a new copy of the wsdl file, you should see that the getHelloWorld function is followed by your new parameter and variable type)
+2. Re-compile and re-run the server, and execute the client; should see that either null is printed in place of your parameter or you will get a SOAP fault from the server (if you download a new copy of the wsdl file, you should see that the getHelloWorld function is followed by your new parameter and variable type)
+3. <mark>Complete task 5<mark>
