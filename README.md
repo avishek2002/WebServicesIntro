@@ -1,4 +1,4 @@
-# How to guide on setting up web services
+# How to guide on setting up web services 
 
 ## Creating a maven project
 ### Terminal
