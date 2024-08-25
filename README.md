@@ -52,5 +52,8 @@ HelloWorld helloWorldObj = service.getHelloWorldImplPort();
 String result = helloWorldObj.getHelloWorld();
 System.out.println(result);
 ```
-4. Run the newly created class (Note: if you get errors; try using a recent, 4.0.3, version of jaxws and/or replacing jakarta with javax in the stub code
+4. Run the newly created class (Note: if you get errors; try using a recent, 4.0.3, version of jaxws and/or replacing jakarta with javax in the stub code). If successful, "Hello World" should be printed on the client terminal.
 
+## Playing around
+1. On the server side, add a parameter (such as String name) to the getHelloWorld() method
+2. Re-compile and re-run the server, and execute the client; should should see that null is printed in place of your parameter (if you download a new copy of the wsdl file, you should see that the getHelloWorld function is followed by your new parameter and variable type)
